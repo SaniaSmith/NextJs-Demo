@@ -1,4 +1,7 @@
 import Image from "next/image";
+import { Greet } from "./component/greet";
+import { Counter } from "./component/counter";
+import Link from "next/link";
 
 export default function Home() {
   return (
@@ -12,6 +15,8 @@ export default function Home() {
           height={38}
           priority
         />
+        <Greet/>
+        <Counter/>
         <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
           <li className="mb-2">
             Get started by editing{" "}
@@ -20,7 +25,7 @@ export default function Home() {
             </code>
             .
           </li>
-          <li>Save and see your changes instantly.</li>
+          <li>Hello World!</li>
         </ol>
 
         <div className="flex gap-4 items-center flex-col sm:flex-row">
@@ -95,6 +100,8 @@ export default function Home() {
           />
           Go to nextjs.org →
         </a>
+        <Link href={"/aboutUs"}>About Us</Link>
+        <Link href={"/blog/first-post"}>Our First Blog Post</Link>
       </footer>
     </div>
   );
